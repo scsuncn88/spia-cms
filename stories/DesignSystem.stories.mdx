@@ -1,0 +1,336 @@
+import { Meta, Story, Canvas, Controls } from '@storybook/blocks';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+<Meta title="Design System/Overview" />
+
+# 浦东机场 CMS 设计系统
+
+浦东机场内容管理系统的设计系统基于现代化的设计原则，提供一致的用户体验和开发效率。
+
+## 设计原则
+
+### 一致性 (Consistency)
+- 统一的视觉语言和交互模式
+- 可预测的用户界面行为
+- 标准化的组件和布局
+
+### 可访问性 (Accessibility)
+- 符合 WCAG 2.1 AA 标准
+- 键盘导航支持
+- 屏幕阅读器兼容
+
+### 响应式设计 (Responsive)
+- 移动优先的设计方法
+- 流式布局和弹性组件
+- 多设备适配
+
+### 性能优化 (Performance)
+- 轻量级组件
+- 懒加载和代码分割
+- 优化的资源加载
+
+## 色彩系统
+
+### 主色调
+我们的主色调基于浦东机场的品牌色彩，营造专业、可信赖的视觉印象。
+
+<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', margin: '24px 0' }}>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      backgroundColor: 'hsl(222, 84%, 4.9%)', 
+      borderRadius: '8px',
+      marginBottom: '8px'
+    }} />
+    <div style={{ fontSize: '12px', fontWeight: '500' }}>Primary</div>
+    <div style={{ fontSize: '10px', color: '#666' }}>222 84% 4.9%</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      backgroundColor: 'hsl(210, 40%, 96%)', 
+      border: '1px solid #e5e7eb',
+      borderRadius: '8px',
+      marginBottom: '8px'
+    }} />
+    <div style={{ fontSize: '12px', fontWeight: '500' }}>Secondary</div>
+    <div style={{ fontSize: '10px', color: '#666' }}>210 40% 96%</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      backgroundColor: 'hsl(0, 84%, 60%)', 
+      borderRadius: '8px',
+      marginBottom: '8px'
+    }} />
+    <div style={{ fontSize: '12px', fontWeight: '500' }}>Destructive</div>
+    <div style={{ fontSize: '10px', color: '#666' }}>0 84% 60%</div>
+  </div>
+</div>
+
+### 状态色彩
+用于表示不同的系统状态和用户反馈。
+
+<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', margin: '24px 0' }}>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '60px', 
+      height: '60px', 
+      backgroundColor: 'hsl(142, 76%, 36%)', 
+      borderRadius: '6px',
+      marginBottom: '4px'
+    }} />
+    <div style={{ fontSize: '11px', fontWeight: '500' }}>Success</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '60px', 
+      height: '60px', 
+      backgroundColor: 'hsl(38, 92%, 50%)', 
+      borderRadius: '6px',
+      marginBottom: '4px'
+    }} />
+    <div style={{ fontSize: '11px', fontWeight: '500' }}>Warning</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '60px', 
+      height: '60px', 
+      backgroundColor: 'hsl(221, 83%, 53%)', 
+      borderRadius: '6px',
+      marginBottom: '4px'
+    }} />
+    <div style={{ fontSize: '11px', fontWeight: '500' }}>Info</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '60px', 
+      height: '60px', 
+      backgroundColor: 'hsl(215, 16%, 47%)', 
+      borderRadius: '6px',
+      marginBottom: '4px'
+    }} />
+    <div style={{ fontSize: '11px', fontWeight: '500' }}>Muted</div>
+  </div>
+</div>
+
+## 排版系统
+
+### 字体层次
+我们使用系统字体栈确保最佳的可读性和性能。
+
+<div style={{ margin: '24px 0' }}>
+  <h1 style={{ fontSize: '2.25rem', fontWeight: '700', margin: '16px 0' }}>
+    标题 1 - 36px/Bold
+  </h1>
+  <h2 style={{ fontSize: '1.875rem', fontWeight: '600', margin: '16px 0' }}>
+    标题 2 - 30px/Semibold
+  </h2>
+  <h3 style={{ fontSize: '1.5rem', fontWeight: '600', margin: '16px 0' }}>
+    标题 3 - 24px/Semibold
+  </h3>
+  <h4 style={{ fontSize: '1.25rem', fontWeight: '500', margin: '16px 0' }}>
+    标题 4 - 20px/Medium
+  </h4>
+  <p style={{ fontSize: '1rem', margin: '16px 0' }}>
+    正文文本 - 16px/Regular - 这是标准的正文文本，用于大部分内容显示。
+  </p>
+  <p style={{ fontSize: '0.875rem', color: '#666', margin: '16px 0' }}>
+    辅助文本 - 14px/Regular - 用于标签、说明和次要信息。
+  </p>
+  <p style={{ fontSize: '0.75rem', color: '#999', margin: '16px 0' }}>
+    小号文本 - 12px/Regular - 用于时间戳、版权信息等。
+  </p>
+</div>
+
+## 间距系统
+
+我们使用 8px 基础网格系统，确保视觉一致性和布局和谐。
+
+<div style={{ margin: '24px 0' }}>
+  <div style={{ display: 'flex', gap: '8px', alignItems: 'end', marginBottom: '16px' }}>
+    {[4, 8, 12, 16, 20, 24, 32, 40, 48, 64].map(size => (
+      <div key={size} style={{ textAlign: 'center' }}>
+        <div style={{ 
+          width: '20px', 
+          height: `${size}px`, 
+          backgroundColor: '#3b82f6',
+          marginBottom: '4px'
+        }} />
+        <div style={{ fontSize: '10px' }}>{size}px</div>
+      </div>
+    ))}
+  </div>
+  <p style={{ fontSize: '14px', color: '#666' }}>
+    基础间距单位：4px, 8px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px
+  </p>
+</div>
+
+## 组件展示
+
+### 按钮组件
+
+<div style={{ display: 'flex', gap: '16px', margin: '24px 0', flexWrap: 'wrap' }}>
+  <Button>主要按钮</Button>
+  <Button variant="outline">次要按钮</Button>
+  <Button variant="destructive">危险按钮</Button>
+  <Button variant="ghost">幽灵按钮</Button>
+</div>
+
+### 卡片组件
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', margin: '24px 0' }}>
+  <Card>
+    <CardHeader>
+      <CardTitle>卡片标题</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p>这是卡片的内容区域，可以包含任意类型的信息。</p>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <CardTitle>统计卡片</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#3b82f6' }}>1,234</div>
+      <p style={{ fontSize: '14px', color: '#666' }}>总访问量</p>
+    </CardContent>
+  </Card>
+</div>
+
+### 徽章组件
+
+<div style={{ display: 'flex', gap: '8px', margin: '24px 0', flexWrap: 'wrap' }}>
+  <Badge>默认</Badge>
+  <Badge variant="secondary">次要</Badge>
+  <Badge variant="destructive">危险</Badge>
+  <Badge variant="outline">轮廓</Badge>
+</div>
+
+## 图标系统
+
+我们使用 [Lucide React](https://lucide.dev/) 图标库，提供一致的线性图标风格。
+
+### 图标使用规范
+- 标准尺寸：16px (h-4 w-4), 20px (h-5 w-5), 24px (h-6 w-6)
+- 线条粗细：1.5px
+- 颜色：继承文本颜色或使用语义色彩
+
+## 响应式断点
+
+我们使用 Tailwind CSS 的标准断点系统：
+
+<div style={{ margin: '24px 0' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
+        <th style={{ padding: '8px', textAlign: 'left' }}>断点</th>
+        <th style={{ padding: '8px', textAlign: 'left' }}>尺寸</th>
+        <th style={{ padding: '8px', textAlign: 'left' }}>设备</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+        <td style={{ padding: '8px' }}>xs</td>
+        <td style={{ padding: '8px' }}>0px</td>
+        <td style={{ padding: '8px' }}>手机（竖屏）</td>
+      </tr>
+      <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+        <td style={{ padding: '8px' }}>sm</td>
+        <td style={{ padding: '8px' }}>640px</td>
+        <td style={{ padding: '8px' }}>手机（横屏）</td>
+      </tr>
+      <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+        <td style={{ padding: '8px' }}>md</td>
+        <td style={{ padding: '8px' }}>768px</td>
+        <td style={{ padding: '8px' }}>平板</td>
+      </tr>
+      <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+        <td style={{ padding: '8px' }}>lg</td>
+        <td style={{ padding: '8px' }}>1024px</td>
+        <td style={{ padding: '8px' }}>笔记本</td>
+      </tr>
+      <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+        <td style={{ padding: '8px' }}>xl</td>
+        <td style={{ padding: '8px' }}>1280px</td>
+        <td style={{ padding: '8px' }}>桌面</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '8px' }}>2xl</td>
+        <td style={{ padding: '8px' }}>1536px</td>
+        <td style={{ padding: '8px' }}>大屏幕</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 动画和过渡
+
+### 动画原则
+- **性能优先**：使用 transform 和 opacity 属性
+- **自然感受**：模拟真实世界的物理效果
+- **适度使用**：避免过度动画影响用户体验
+
+### 标准时长
+- **快速**：150ms - 用于悬停效果和小型状态变化
+- **标准**：300ms - 用于页面过渡和模态框
+- **缓慢**：500ms - 用于复杂的布局变化
+
+### 缓动函数
+- **ease-out**：用于入场动画
+- **ease-in**：用于退场动画
+- **ease-in-out**：用于状态变化
+
+## 可访问性指南
+
+### 颜色对比
+- 正文文本：至少 4.5:1 对比度
+- 大号文本：至少 3:1 对比度
+- 交互元素：至少 3:1 对比度
+
+### 键盘导航
+- 所有交互元素支持 Tab 键导航
+- 明确的焦点指示器
+- 逻辑的 Tab 顺序
+
+### 屏幕阅读器
+- 语义化的 HTML 结构
+- 适当的 ARIA 标签
+- 有意义的 alt 文本
+
+## 开发指南
+
+### 组件开发
+1. 使用 TypeScript 确保类型安全
+2. 遵循 React 最佳实践
+3. 提供完整的 Storybook 文档
+4. 编写单元测试
+
+### 样式开发
+1. 优先使用 Tailwind CSS 工具类
+2. 自定义样式放在 CSS 模块中
+3. 使用 CSS 变量支持主题切换
+4. 遵循移动优先的原则
+
+### 性能优化
+1. 懒加载非关键组件
+2. 使用 React.memo 优化渲染
+3. 避免不必要的重新渲染
+4. 优化图像和资源加载
+
+## 总结
+
+这个设计系统为浦东机场 CMS 项目提供了完整的设计和开发指南。通过遵循这些原则和规范，我们能够：
+
+- 确保产品的一致性和专业性
+- 提高开发效率和代码质量
+- 提供优秀的用户体验
+- 维护可扩展和可维护的代码库
+
+如有任何问题或建议，请联系设计系统团队。
